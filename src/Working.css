@@ -1,0 +1,14 @@
+
+.Working{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: darksalmon
+}
+
+.Working img.isWorking{
+    animation: App-logo-spin infinite 5s linear;
+}
+
+.Working img.notWorking{
+    animation: App-logo-spin infinite 50s linear;
+}

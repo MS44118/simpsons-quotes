@@ -1,6 +1,7 @@
 //src/Working.js
 import React, { Component } from 'react';
 import donut from './donut.png';
+import './Working.css';
 
 class Working extends Component{
 
@@ -16,13 +17,21 @@ class Working extends Component{
   }
 
   render(){
-    const homerWorking = this.state.working ? 'working' : 'notWorking';
+    const homerWorking = this.state.working ? 'isWorking' : 'notWorking';
     return (
       <div className="Working">
-        <img className="Donut" src={donut} alt="donut"/>
-        <p>Is Homer Working? {homerWorking}</p>
-        <button onClick={this.letsHaveANap}>
-          Need a Nap...? 
+        <img 
+          className={homerWorking} 
+          src={donut} 
+          alt="donut"
+        />
+        <p>Is Homer Working?</p>
+        <p>{homerWorking}</p>
+        <button 
+          onClick={this.letsHaveANap}
+          className={homerWorking}
+        >
+          Change 
         </button>
       </div>
     )
